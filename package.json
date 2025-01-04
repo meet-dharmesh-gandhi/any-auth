@@ -1,0 +1,38 @@
+{
+	"name": "any-auth",
+	"version": "1.0.0",
+	"description": "Library for adding different auth providers with ease in a website",
+	"main": "./dist/server/index.js",
+	"module": "./dist/client/index.mjs",
+	"types": "./dist/client/index.d.ts",
+	"scripts": {
+		"build": "tsup --config tsup.config.ts"
+	},
+	"keywords": [
+		"auth",
+		"google auth",
+		"google",
+		"facebook",
+		"facebook auth",
+		"auth provider",
+		"auth library"
+	],
+	"author": "geniusmind9999",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^22.10.2",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"@types/findup-sync": "^4.0.5",
+		"crypto": "^1.0.1",
+		"findup-sync": "^5.0.0"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/client/index.mjs",
+			"require": "./dist/server/index.js"
+		}
+	}
+}

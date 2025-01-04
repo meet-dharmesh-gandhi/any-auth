@@ -1,0 +1,6 @@
+notes:
+
+need to add getting params from specified params (existing ones from the params list), hard to access rn
+
+TODO: add the step logging facility to the supported providers as well.
+TODO: modify the errors everywhere to use the globalErrorHandler function instead of just throwing errors!
