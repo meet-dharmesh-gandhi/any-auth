@@ -44,7 +44,7 @@ export function getProviderUrl(
 			google: "https://accounts.google.com/o/oauth2/v2/auth",
 			github: "https://github.com/login/oauth/authorize",
 			microsoft: `https://login.microsoftonline.com/${
-				configProvider!.tenant ?? "common"
+				configProvider?.tenant ?? "common"
 			}/oauth2/authorize`,
 			linkedin: "https://www.linkedin.com/oauth/v2/authorization",
 			salesforce:
@@ -60,8 +60,9 @@ export function getProviderUrl(
 		},
 		token: {
 			github: "https://github.com/login/oauth/access_token",
-			microsoft:
-				"https://login.microsoftonline.com/organizations/oauth2/v2.0/token",
+			microsoft: `https://login.microsoftonline.com/${
+				configProvider?.tenant ?? "common"
+			}/oauth2/v2.0/token`,
 			linkedin: "https://www.linkedin.com/oauth/v2/accessToken",
 			salesforce: "https://login.salesforce.com/services/oauth2/token",
 			discord: "https://discord.com/api/oauth2/token",
