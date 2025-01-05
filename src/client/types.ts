@@ -200,7 +200,8 @@ export type responseType = {
 export type toReturnType = customObjectType<string, string[] | "all">;
 
 export type validateResponseType = ((
-	prevFetchData: previousFetchDataType
+	previousFetchData: previousFetchDataType,
+	currentFetchData: currentFetchDataType
 ) => boolean)[];
 
 export type responseParseType = "json" | "text";

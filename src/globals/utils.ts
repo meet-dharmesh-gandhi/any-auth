@@ -646,7 +646,10 @@ export async function waitAndRetryRequest(
 	timeout: number,
 	log: logFunctionType,
 	onErrorInResponse: errorHandlerType,
-	validateResponse: ((prevFetchData: previousFetchDataType) => boolean)[],
+	validateResponse: ((
+		previousFetchData: previousFetchDataType,
+		currentFetchData: currentFetchDataType
+	) => boolean)[],
 	previousFetchData: previousFetchDataType,
 	maxRetries: number,
 	backOffStrategy: (
@@ -754,7 +757,10 @@ export async function waitAndRetryRequest(
 			let index = 0;
 			for (const value of validateResponse) {
 				log(["Reached the", (index + 1).toString(), "function..."]);
-				const validResponse = await value(previousFetchData);
+				const validResponse = await value(
+					previousFetchData,
+					currentFetchData
+				);
 				log([
 					validResponse
 						? "Response passed validation"

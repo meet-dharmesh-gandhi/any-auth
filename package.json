@@ -8,14 +8,30 @@
 	"scripts": {
 		"build": "tsup --config tsup.config.ts"
 	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md"
+	],
 	"keywords": [
 		"auth",
 		"google auth",
-		"google",
-		"facebook",
+		"github auth",
+		"microsoft auth",
+		"linkedin auth",
+		"salesforce auth",
+		"discord auth",
+		"spotify auth",
+		"amazon auth",
+		"slack auth",
+		"twitch auth",
 		"facebook auth",
+		"x auth",
+		"custom auth",
 		"auth provider",
-		"auth library"
+		"auth library",
+		"oauth"
 	],
 	"author": "geniusmind9999",
 	"license": "MIT",
@@ -23,11 +39,6 @@
 		"@types/node": "^22.10.2",
 		"tsup": "^8.3.5",
 		"typescript": "^5.7.2"
-	},
-	"dependencies": {
-		"@types/findup-sync": "^4.0.5",
-		"crypto": "^1.0.1",
-		"findup-sync": "^5.0.0"
 	},
 	"exports": {
 		".": {
