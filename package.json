@@ -45,5 +45,9 @@
 			"import": "./dist/client/index.mjs",
 			"require": "./dist/server/index.js"
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/meet-dharmesh-gandhi/any-auth"
 	}
 }
