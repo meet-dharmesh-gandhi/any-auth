@@ -1,6 +1,6 @@
 {
 	"name": "any-auth",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Library for adding different auth providers with ease in a website",
 	"main": "./dist/server/index.js",
 	"module": "./dist/client/index.mjs",
